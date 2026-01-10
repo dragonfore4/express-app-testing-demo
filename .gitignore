@@ -1,7 +1,7 @@
 node_modules
 npm-debug.log*
 .DS_Store
-coverage/*
+coverage
 .nyc_output
 dist
 build
