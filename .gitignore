@@ -5,10 +5,6 @@ coverage
 .nyc_output
 dist
 build
-__tests__
-__mocks__
-*.test.js
-e2e_tests
 .jest
 jest.config.js
 Jenkinsfile
