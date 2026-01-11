@@ -7,7 +7,6 @@ dist
 build
 .jest
 jest.config.js
-Jenkinsfile
 README.md
 .vscode
 .idea
@@ -15,3 +14,4 @@ README.md
 .coverage
 lcov.info
 clover.xml
+.env*
