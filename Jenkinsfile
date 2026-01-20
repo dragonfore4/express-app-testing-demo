@@ -9,7 +9,7 @@ pipeline {
         
         // Nexus Config
         NEXUS_URL       = "nexus:8082"
-        NEXUS_REPO      = "nexus:8082/express-testing"
+        NEXUS_REPO      = "nexus:8082/express-app-testing"
         
         // Credentials IDs
         NEXUS_CREDS     = "nexus-docker-creds"
@@ -58,12 +58,12 @@ pipeline {
                                 docker run --rm \
                                 --network host \
                                 -u 0:0 \
-                                -e SONAR_TOKEN=${SONAR_TOKEN} \
                                 -v ${WORKSPACE}:/app \
                                 -w /app \
                                 sonarsource/sonar-scanner-cli \
                                 -Dsonar.projectKey=${SONAR_PROJECT} \
                                 -Dsonar.sources=. \
+                                -Dsonar.token=${SONAR_TOKEN} \
                                 -Dsonar.host.url=http://sonarqube:9000 \
                                 -Dsonar.working.directory=/app/.scannerwork \
                                 -Dsonar.javascript.lcov.reportPaths=coverage/lcov.info
